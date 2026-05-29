@@ -75,7 +75,7 @@ cakeBtn.addEventListener("click", () => {
 
     document.getElementById("cake-message")
     .innerText =
-    "WISH ACCEPTED✨🎂";
+    "WISH ACCEPTED✨🎂\nWISH ACCEPTED✨🎂\nNow you can spend infinite time with Danish, lucky you🙄";
 
     createConfetti();
 });
