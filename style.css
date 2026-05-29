@@ -643,3 +643,49 @@ body::before {
 .sticker {
   animation: floaty 4s ease-in-out infinite;
 }
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+  opacity: 0.25;
+  pointer-events: none;
+  z-index: 1;
+}
+.photo {
+  position: absolute;
+  transform: rotate(-2deg);
+  border: 8px solid white;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+.photo::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 20px;
+  background: rgba(255, 220, 180, 0.6);
+  top: -10px;
+  left: 20px;
+  transform: rotate(-10deg);
+}
+.bg-item {
+  position: fixed;
+  font-size: 20px;
+  opacity: 0.3;
+  z-index: 0;
+  animation: float 6s infinite ease-in-out;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(10deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+.note {
+  position: absolute;
+  font-family: "Comic Sans MS", cursive;
+  font-size: 14px;
+  opacity: 0.4;
+  transform: rotate(-5deg);
+}
