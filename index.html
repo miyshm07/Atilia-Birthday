@@ -1,84 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">>
+<head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Happy Birthday</title>
 
     <link rel="stylesheet" href="style.css">
-</<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">>
+
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+
 <body>
 
+    <!-- LOADING SCREEN -->
+
     <div class="loading-screen">
-        <h1>Preparing something cringe...</h1>
+        <h1>Preparing emotional damage...</h1>
     </div>
 
-    <div class="main-content">
+    <!-- MUSIC PLAYER -->
 
-        <h1>Happy Belated Birthday Atiliaa 🤍</h1>
+    <div class="music-player">
 
-        <p>
-            this website contains:
-            cringe,
-            illegal affection,
+        <button id="music-btn">
+            🎵 play music
+        </button>
+
+    </div>
+
+    <audio id="bg-music" loop>
+        <source src="music/song.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- MAIN -->
+
+    <div class="container">
+
+        <h1 class="title">
+            Happy Belated Birthday Atiliaa 🤍
+        </h1>
+
+        <p class="subtitle">
+            this website contains cringe, illegal affection,
             and emotional manipulation
         </p>
 
+        <!-- PHOTOS -->
+
+        <div class="gallery">
+
+            <div class="polaroid one">
+                <img src="images/pic1.jpg">
+                <p>peak chaos</p>
+            </div>
+
+            <div class="polaroid two">
+                <img src="images/pic2.jpg">
+                <p>sleep deprived duo</p>
+            </div>
+
+            <div class="polaroid three">
+                <img src="images/pic3.jpg">
+                <p>core memory</p>
+            </div>
+
+            <div class="polaroid four">
+                <img src="images/pic4.jpg">
+                <p>professional yappers</p>
+            </div>
+
+            <div class="polaroid five">
+                <img src="images/pic5.jpg">
+                <p>my fav human</p>
+            </div>
+
+        </div>
+
+        <!-- SECRET -->
+
+        <div class="secret-star">
+            ⭐
+        </div>
+
+        <!-- LETTERS -->
+
+        <div class="letters-box">
+
+            <h2>open when...</h2>
+
+            <div class="buttons">
+
+                <button onclick="showMessage('sad')">
+                    sad
+                </button>
+
+                <button onclick="showMessage('tired')">
+                    tired
+                </button>
+
+                <button onclick="showMessage('miss')">
+                    missing me
+                </button>
+
+            </div>
+
+            <p id="letter-output"></p>
+
+        </div>
+
+        <!-- CAKE -->
+
+        <div class="cake-section">
+
+            <h2>make a wish 🎂</h2>
+
+            <button id="cake-btn">
+                blow candle
+            </button>
+
+            <p id="cake-message"></p>
+
+        </div>
+
     </div>
-<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 
     <script src="script.js"></script>
+
 </body>
-
-<div class="photo-section">
-
-    <div class="polaroid rotate-left">
-        <img src="images/pic1.jpg">
-        <p>peak chaos</p>
-    </div>
-
-    <div class="polaroid rotate-right">
-        <img src="images/pic2.jpg">
-        <p>sleep deprived duo</p>
-    </div>
-
-</div>
-<audio id="bg-music" loop>
-    <source src="music/song.mp3" type="audio/mp3">
-</audio>
-
-<button id="music-btn">🎵 Play Music</button>
-
-<div class="secret-star">⭐</div>
-
-<div class="letters">
-
-<button onclick="showMessage('sad')">
-Open when sad
-</button>
-
-<button onclick="showMessage('tired')">
-Open when tired
-</button>
-
-<button onclick="showMessage('miss')">
-Open when missing me
-</button>
-
-</div>
-
-<p id="letter-output"></p>
-
-<div class="cake-section">
-
-<h2>Make a wish 🎂</h2>
-
-<button id="cake-btn">
-Blow Candle
-</button>
-
-<p id="cake-message"></p>
-
-</div>
-
 </html>
