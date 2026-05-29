@@ -12,6 +12,8 @@ const music = document.getElementById("bg-music");
 
 const musicBtn = document.getElementById("music-btn");
 
+music.volume = 0.3;
+
 musicBtn.addEventListener("click", () => {
 
     if(music.paused){
@@ -34,7 +36,7 @@ musicBtn.addEventListener("click", () => {
 document.querySelector(".secret-star")
 .addEventListener("click", () => {
 
-    alert("you found the secret message: you're genuinely important to me 🤍");
+    alert("secret unlocked: you're genuinely one of my favorite people 🤍");
 
 });
 
@@ -47,32 +49,61 @@ function showMessage(type){
     if(type === "sad"){
 
         output.innerText =
-        "everything will pass eventually, including bad days 🤍";
+        "bad days eventually pass. but your chaos somehow stays forever 🤍";
     }
 
     if(type === "tired"){
 
         output.innerText =
-        "go drink water and sleep before becoming a zombie";
+        "please sleep before turning into a clinically exhausted raccoon";
     }
 
     if(type === "miss"){
 
         output.innerText =
-        "skill issue honestly";
+        "unfortunately for you, i'm always here";
     }
 }
 
 /* CAKE */
 
-document.getElementById("cake-btn")
-.addEventListener("click", () => {
+const cakeBtn = document.getElementById("cake-btn");
+
+cakeBtn.addEventListener("click", () => {
+
+    cakeBtn.innerText = "🕯 candle blown!";
 
     document.getElementById("cake-message")
     .innerText =
-    "WISH ACCEPTED ✨";
+    "WISH ACCEPTED ✨🎂";
 
+    createConfetti();
 });
+
+/* CONFETTI */
+
+function createConfetti(){
+
+    for(let i=0; i<80; i++){
+
+        const confetti = document.createElement("div");
+
+        confetti.classList.add("confetti");
+
+        confetti.style.left = Math.random() * window.innerWidth + "px";
+
+        confetti.style.top = "-10px";
+
+        confetti.style.animationDuration =
+        (Math.random() * 3 + 2) + "s";
+
+        document.body.appendChild(confetti);
+
+        setTimeout(() => {
+            confetti.remove();
+        },5000);
+    }
+}
 
 /* EXIT MESSAGE */
 
