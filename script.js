@@ -4,7 +4,7 @@ setTimeout(() => {
 
     document.querySelector(".loading-screen").style.display = "none";
 
-}, 20000);
+}, 5000);
 
 /* MUSIC */
 
