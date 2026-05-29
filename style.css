@@ -689,3 +689,16 @@ body::after {
   opacity: 0.4;
   transform: rotate(-5deg);
 }
+.bg-item {
+  position: absolute;
+  font-size: 22px;
+  opacity: 0.25;
+  pointer-events: none;
+  animation: floaty 6s ease-in-out infinite;
+}
+
+@keyframes floaty {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(10deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}   

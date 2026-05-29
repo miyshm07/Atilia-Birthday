@@ -75,7 +75,7 @@ cakeBtn.addEventListener("click", () => {
 
     document.getElementById("cake-message")
     .innerText =
-    "WISH ACCEPTED✨🎂\nWISH ACCEPTED✨🎂\nNow you can spend infinite time with Danish, lucky you🙄";
+    "WISH ACCEPTED✨🎂\nNow you can spend infinite time with Danish, lucky you🙄";
 
     createConfetti();
 });
@@ -134,4 +134,23 @@ function checkPassword(){
             box.classList.remove("shake");
         },300);
     }
+}
+const emojis = ["🐵", "🤍", "✨", "🎀", "⭐", "💌", "🧸"];
+
+const container = document.getElementById("bg-container");
+
+for (let i = 0; i < 30; i++) {
+  const item = document.createElement("div");
+  item.className = "bg-item";
+
+  item.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+
+  item.style.left = Math.random() * 100 + "vw";
+  item.style.top = Math.random() * 100 + "vh";
+
+  item.style.fontSize = (16 + Math.random() * 20) + "px";
+  item.style.animationDuration = (3 + Math.random() * 5) + "s";
+  item.style.opacity = (0.15 + Math.random() * 0.3);
+
+  container.appendChild(item);
 }
